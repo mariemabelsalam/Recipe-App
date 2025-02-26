@@ -4,7 +4,7 @@ import { MeallayoutComponent } from "./components/meallayout/meallayout.componen
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MeallayoutComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
