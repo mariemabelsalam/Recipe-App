@@ -1,0 +1,31 @@
+<section>
+    <h2 class="font-bold text-3xl text-[#E47437]">Learn, Cook, Eat Your Food</h2>
+    <ul class="my-7 flex gap-5 flex-wrap">
+        <li class="border px-6 py-1.5 rounded-full shadow
+        hover:shadow-gray-300 hover:shadow-lg cursor-pointer hover:bg-[#F9FAFB]
+           duration-300 border-gray-500 transition-all" [routerLink]="['/category/all']"> All </li>
+
+        @for (category of categories; track $index) {
+        <li class="border px-6 py-1.5 rounded-full shadow
+         hover:shadow-gray-300 hover:shadow-lg cursor-pointer 
+            duration-300 border-gray-500 transition-all" routerLinkActive="bg-[#212529] text-white" [routerLink]="['/category' , category.strCategory]">
+            {{category.strCategory}} </li>
+        }
+    </ul>
+</section>
+
+
+<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 my-15 gap-7 gap-y-12">
+    @for (item of meals; track $index) {
+    <div class="meal bg-white rounded-3xl text-center py-8 hover:scale-105 transition-all duration-300 group">
+        <img [src]="item.strMealThumb" class="w-[60%] -translate-y-16 rounded-full 
+        group-hover:rotate-[360deg] mx-auto duration-700 transition-all" alt="">
+        <h2 class="mb-5 font-bold"> {{item.strMeal}} </h2>
+        <a type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4
+             focus:ring-green-300  rounded-xl text-sm px-5 py-2.5 me-2
+              hover:scale-105 transition-all mb-4 font-semibold duration-300"
+            [routerLink]="['/details',item.idMeal]">View Reciepe</a>
+
+    </div>
+    }
+</div>

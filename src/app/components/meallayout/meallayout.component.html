@@ -1,0 +1,43 @@
+<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
+   aria-controls="sidebar-multi-level-sidebar" type="button"
+   class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+   <span class="sr-only">Open sidebar</span>
+   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+         d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
+   </svg>
+</button>
+
+<aside id="sidebar-multi-level-sidebar"
+   class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+   aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+      <ul class="space-y-2 font-medium">
+         <img src="/images/logo.png" class="w-full" alt="">
+         <li class="cursor-pointer bg-[#F29724] p-2 text-white mt-5 hover:shadow-lg hover:shadow-orange-200
+         rounded-xl text-xl font-semibold m-2 hover:scale-105 transition duration-[.5s]">
+            <i class="fa-solid fa-utensils text-lg ms-1.5 me-2"></i>
+            Meals
+         </li>
+         <li class="cursor-pointer text-xl font-semibold m-2 border rounded-xl p-2 mt-8
+          hover:scale-105 transition duration-[.5s]  ">
+            <i class="fa-solid fa-utensils text-lg ms-1.5 me-2"></i>
+            Ingredients
+         </li>
+         <li class="cursor-pointer text-xl font-semibold m-2 border rounded-xl p-2 mt-8 
+          hover:scale-105 transition duration-[.5s]">
+            <i class="fa-solid fa-utensils text-lg ms-1.5 me-2"></i>
+            Area
+         </li>
+      </ul>
+   </div>
+</aside>
+
+<div class="p-4 sm:ml-64">
+   <div class="p-4 rounded-lg ">
+      <div class="grid grid-cols-3 gap-4 mb-4"></div>
+   </div>
+   <router-outlet></router-outlet>
+   
+</div>
